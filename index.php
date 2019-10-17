@@ -1,6 +1,6 @@
 <?php 
 // menambah / memanggil file database.php
-include '../database.php';
+include 'database.php';
 $db = new Database();
 ?>
 <!DOCTYPE html>
@@ -12,8 +12,7 @@ $db = new Database();
     <title>Latihan CRUD - Read Data</title>
 </head>
 <body>
-    <center>Data </center>
-    <a href="/bio/create.php">Input Data </a>
+    <a href="create.php">Input Data </a>
     <table border="1">
         <tr>
             <th>id</th>
@@ -26,21 +25,20 @@ $db = new Database();
             <th colspan="3">Aksi</th>
         </tr>
         <?php
-            $bio = new bio();
+            $bio = new Bio();
             $no = 1;
             foreach($bio->index() as $data) {
         ?>
         <tr>
             <td><?php echo $no++; ?></td>
-            <td><?php echo $data['id']; ?></td>
             <td><?php echo $data['nama']; ?></td>
             <td><?php echo $data['alamat']; ?></td>
-            <td><?php echo $data['tggl lahir']; ?></td>
-            <td><?php echo $data['jenis kelamin']; ?></td>
+            <td><?php echo $data['tgl_lahir']; ?></td>
+            <td><?php echo $data['jenkel']; ?></td>
             <td><?php echo $data['agama']; ?></td>
             <td><?php echo $data['umur']; ?></td>
-        <td><a href="show.php?id=<?php echo $data['id']; ?>&aksi=show">Show</a></td>
-            <td><a href="edit.php?id=<?php echo $data['id']; ?>&aksi=edit">Edit</a></td>
+            <td><a href="show.php?id=<?php echo $data['id']; ?>">Show</a></td>
+            <td><a href="edit.php?id=<?php echo $data['id']; ?>">Edit</a></td>
             <td><a href="proses.php?id=<?php echo $data['id']; ?>&aksi=delete">Delete</a></td>
         </tr>
         <?php }?>

@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +19,7 @@
                     <div class="card-header">Masukkan Data</div>
                     <div class="card-body">
                     <!-- Isi Disini -->
-                    <form action="proses.php?aksi=tambah" method="POST">
+                    <form action="proses.php?aksi=tambah" method="post">
                     <div class="form-group">
                         <label for="">Nama</label>
                         <input type="text" name="nama" class="form-control" required>
@@ -28,30 +29,30 @@
                         <textarea name="alamat" class="form-control" rows="5" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="">Tanggal Lahir</label>
+                <label for="">Tanggal Lahir</label>
                         <input type="date" name="tgl_lahir" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="">Jenis Kelamin</label><br>
-                        <input type="radio" name="jenkel"  value="Perempuan" checked>Perempuan
+                        <input type="radio" name="jenkel"  value="Perempuan">Perempuan
                         <input type="radio" name="jenkel"  value="Laki-laki">Laki-laki
                     </div>
                     <div class="form-group">
                         <label for="">Agama</label><br>
                         <select name="agama">
-                        <option selected></option>
+                        <option selected>pilih</option>
                         <option value="Islam">Islam</option>
                         <option value="Kristen">Kristen</option>
                         <option value="Hindu">Hindu</option>
                         <option value="Budha">Budha</option>
                         </select>
                     </div>
-                  
+                     
                     <div class="form-group">
-                        <button type="submit" name="pros" class="byn btn-info">Proses</button>
-                        <button type="reset" class="byn btn-danger">Reset</button>
+                        <button type="submit" name="save" class="btn btn-outline-success" >Proses</button>
                     </div>
                     </form>
+                    
                     <!-- End Isi -->
                     </div>
                 </div>
@@ -67,4 +68,4 @@
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <!-- End Js -->
 </body>
-</html>
+</>
